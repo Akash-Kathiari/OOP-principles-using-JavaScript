@@ -24,3 +24,6 @@ class Member extends Users{
 let akash = new Member('akash', 'ak2378@njit.edu', 'password','premium');
 console.log('getting akashs package');
 akash.getPackage();
+
+console.log('getting akashs registeration, outside of function');
+akash.register();
