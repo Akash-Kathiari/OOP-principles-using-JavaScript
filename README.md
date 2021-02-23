@@ -16,10 +16,62 @@ D. Dependency Inversion Principle == Handing over control from the function itse
 THE FOUR PRINCIPLES OF OOP
 
 Encapsulation helps with properly organizing logic. A class can have multiple methods that help define it. Encapsulation reminds me of the Single Responsibility Principle which breaks down your goals into smaller pieces. Encapsulation helps organize those pieces from top to bottom.
+FOR EXAMPLE:
+//OLD PROCEDURAL PROGRAMMING
+let pizza=12;
+let toppings = 5;
+let delivery = 7;
+
+function pizzaParty(pizza, toppings,delivery) {
+return  pizza + toppings + delivery;
+}
+
+//ENCAPSULATION
+let order = {
+//properties of this object
+pizza:12,
+toppings:10,
+delivery: 7,
+//method and order are all apart of one unit
+pizzaParty: function () {
+return this.pizza + this.toppings +this.delivery;
+}
+};
+order.pizzaParty();
 
 Abstraction basically means to make your package your code neatly by high level so it can be applied. instead of showing your fatty source code, abstraction will gather the purpose of your program so it can be easily used. Like a smart phone with multiple functions, if you want to see the weather, you just click on the weather app, instead of having to rummage through lower level detailed source code.
 
 Inheritance helps to reduce code by using parent and child classes . The child class reuses all the items and methods of the parent and uses them in it's own individual way. So when big codebase is getting too abstract it's best to structure the code efficiently
+FOR EXAMPLE:
+class User{
+constructor(username, email, password) {
+this.username = username;
+this.email=email;
+this.password=password;
+}
+static countUsers(){
+console.log('there are 50 users');
+}
+register(){
+console.log(this.username+' is not registered');
+}
+}
+
+class Member extends Users{
+constructor(username, email, password, memberPackage) {
+super(username,email,password);
+this.package=memberPackage;
+}
+getPackage(){
+console.log(this.username+' is subscribed to the '+this.package+'package');
+}
+}
+let akash = new Member('akash', 'ak2378@njit.edu', 'password','premium');
+console.log('getting akashs package');
+akash.getPackage();
+
+console.log('getting akashs registeration, outside of function');
+akash.register();
 
 Polymorphism defines a parent interface to be reused, then similar to inheritance the child reuses the parent's methods but uses the methods to create different outcomes. So having a parent that has a method purposed to shape its children is the key to polymorphism. While inheritance is more of a direct one to one value but purposed for a different outcome.
 
