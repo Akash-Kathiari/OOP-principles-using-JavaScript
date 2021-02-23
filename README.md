@@ -22,3 +22,5 @@ Abstraction basically means to make your package your code neatly by high level 
 Inheritance helps to reduce code by using parent and child classes . The child class reuses all the items and methods of the parent and uses them in it's own individual way. So when big codebase is getting too abstract it's best to structure the code efficiently
 
 Polymorphism defines a parent interface to be reused, then similar to inheritance the child reuses the parent's methods but uses the methods to create different outcomes. So having a parent that has a method purposed to shape its children is the key to polymorphism. While inheritance is more of a direct one to one value but purposed for a different outcome.
+
+To Sum up OOP concepts: Encapsulation == reduced complexity + increase useability; Abstraction == reduce complexity + isolates impact of changes; Inheritance == eliminate redundant code; Polymorphism == refractor statements and use cases.
